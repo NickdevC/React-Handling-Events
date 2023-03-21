@@ -8,6 +8,7 @@ class StatefulGreeting extends React.Component {
             introduction: "Hello!",
             buttonText: "Exit",
         };
+        this.handleClick = this.handleClick.bind(this)
     }
     
     handleClick() {
@@ -23,7 +24,8 @@ class StatefulGreeting extends React.Component {
                 <h1>
                     {this.state.introduction} {this.props.greeting}
                 </h1>
-                <button onClick={this.handleClick.bind(this)}>
+                {/* <button onClick={this.handleClick.bind(this)}> */}
+                <button onClick={this.handleClick}>
                     {this.state.buttonText}
                 </button>
             </div>
