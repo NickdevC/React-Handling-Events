@@ -16,6 +16,13 @@ class MethodsAsPropsParent extends Component {
       console.log(this)
     }
 
+    handleSignOut = () => {
+      this.setState({
+        isLoggedIn: false
+      })
+      console.log(this)
+    }
+
 
     render() {
         return (
@@ -23,6 +30,7 @@ class MethodsAsPropsParent extends Component {
                 <MethodsAsPropsChild 
                   isLoggedIn={this.state.isLoggedIn} 
                   handleSignIn={this.handleSignIn}
+                  handleSignOut={this.handleSignOut}
                 />
             </div>
         )
