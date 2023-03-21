@@ -1,11 +1,9 @@
 import "./App.css";
-import EventClass from "./components/EventsClass";
-import EventsFunctional from "./components/EventsFunctional";
+import EventBinding from "./components/EventBinding";
 
 function App() {
   return <div className="App">
-    <EventsFunctional />
-    <EventClass />
+    <EventBinding />
   </div>;
 }
 
