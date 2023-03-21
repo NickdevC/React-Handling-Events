@@ -14,7 +14,10 @@ function MethodsAsPropsChild(props) {
                         </ol>
                     </div>
                 ) : (
+                  <div>
                     <p>Please sign in</p>
+                    <button onClick={props.handleSignIn}>Sign In</button>
+                  </div>
                 )
             }
         </div>

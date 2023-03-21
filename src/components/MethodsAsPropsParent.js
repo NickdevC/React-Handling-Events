@@ -5,13 +5,25 @@ class MethodsAsPropsParent extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            isLoggedIn: true,
+            isLoggedIn: false,
         }
     }
+
+    handleSignIn = () => {
+      this.setState({
+        isLoggedIn: true
+      })
+      console.log(this)
+    }
+
+
     render() {
         return (
             <div>
-                <MethodsAsPropsChild isLoggedIn={this.state.isLoggedIn} />
+                <MethodsAsPropsChild 
+                  isLoggedIn={this.state.isLoggedIn} 
+                  handleSignIn={this.handleSignIn}
+                />
             </div>
         )
     }
